@@ -67,7 +67,7 @@ int main(void)
         delay(4);
         current = (current - prev)*59/2000;
         fprintf(stderr,"Current Distance is %lu(cm)\n", current);
-        if(current>40 && current < 300) {
+        if(current>0 && current < 300) {
         
             if(current<50) {
                 gpio_clear(L_FRONT);
