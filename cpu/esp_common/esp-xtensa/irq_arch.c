@@ -41,12 +41,12 @@ unsigned int IRAM irq_disable(void)
     uint32_t state;
 
     /* read and set interrupt level (RSIL) */
-    __asm__ volatile ("rsil %0, " XTSTR(XCHAL_EXCM_LEVEL) : "=a" (state) :: "memory");
+//    __asm__ volatile ("rsil %0, " XTSTR(XCHAL_EXCM_LEVEL) : "=a" (state) :: "memory");
     /* mask out everything else of the PS register that do not belong to
        interrupt level (bits 3..0) */
     state &= 0xf;
 
-    DEBUG("%s %02x(%02x)\n", __func__, XCHAL_EXCM_LEVEL, state);
+//    DEBUG("%s %02x(%02x)\n", __func__, XCHAL_EXCM_LEVEL, state);
     return state;
 }
 
