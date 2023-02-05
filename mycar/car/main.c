@@ -69,7 +69,7 @@ int main(void)
         fprintf(stderr,"Current Distance is %lu(cm)\n", current);
         if(current>40 && current < 300) {
         
-            if(current<60) {
+            if(current<50) {
                 gpio_clear(L_FRONT);
                 gpio_set(L_BACK);
                 gpio_clear(R_FRONT);
